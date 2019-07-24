@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Hexo,Github,">
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yin Shan">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="博客框架的选择 Jekyll hugo django hexo  1. Hexo简介Hexo特点 支持Markdown: 支持Markdown意味着你可以把经历从排版中解放出来. 轻量: 无需拥有后台及数据库,专心写好你的文章 一键部署: 可以通过Git或者ftp来将生成的静态页面部署到服务器或者主机空间中 插件丰富: 丰富的插件可以满足你的各种需求.  Hexo原理Hexo基于Node.js,将">
+<meta name="keywords" content="Hexo,Github">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Hexo搭建博客">
+<meta property="og:url" content="http://yoursite.com/2019/07/24/使用Hexo搭建博客/index.html">
 <meta property="og:site_name" content="Yin Shan">
+<meta property="og:description" content="博客框架的选择 Jekyll hugo django hexo  1. Hexo简介Hexo特点 支持Markdown: 支持Markdown意味着你可以把经历从排版中解放出来. 轻量: 无需拥有后台及数据库,专心写好你的文章 一键部署: 可以通过Git或者ftp来将生成的静态页面部署到服务器或者主机空间中 插件丰富: 丰富的插件可以满足你的各种需求.  Hexo原理Hexo基于Node.js,将">
 <meta property="og:locale" content="中文">
+<meta property="og:updated_time" content="2019-07-24T06:01:28.566Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yin Shan">
+<meta name="twitter:title" content="使用Hexo搭建博客">
+<meta name="twitter:description" content="博客框架的选择 Jekyll hugo django hexo  1. Hexo简介Hexo特点 支持Markdown: 支持Markdown意味着你可以把经历从排版中解放出来. 轻量: 无需拥有后台及数据库,专心写好你的文章 一键部署: 可以通过Git或者ftp来将生成的静态页面部署到服务器或者主机空间中 插件丰富: 丰富的插件可以满足你的各种需求.  Hexo原理Hexo基于Node.js,将">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/24/使用Hexo搭建博客/">
 
 
 
 
 
-  <title>Yin Shan</title>
+  <title>使用Hexo搭建博客 | Yin Shan</title>
   
 
 
@@ -140,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,224 +218,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/24/EventBus3-0使用指南/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yin Shan">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yin Shan">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/24/EventBus3-0使用指南/" itemprop="url">EventBus3.0使用指南</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-24T14:04:24+08:00">
-                2019-07-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>EventBus是一个Android端优化的publish/subscribe消息总线，简化了应用程序内各组件间、组件与后台线程间的通信。比如请求网络，等网络返回时通过Handler或Broadcast通知UI，两个Fragment之间需要通过Listener通信，这些需求都可以通过EventBus实现。</p>
-<p>大家谈到EventBus，总会想到greenrobot的EventBus，但是实际上EventBus是一个通用的叫法。例如Google出品的Guava，Guava是一个庞大的库，EventBus只是它附带的一个小功能，因此实际项目中使用并不多。用的最多的是greenrobot/EventBus，这个库的优点是接口简洁，集成方便。另一个库square/otto修改自 Guava ，用的人也不少。</p>
-<p>目前本文只讨论greenrobot的EventBus库。</p>
-<p>EventBus 3.0是greenrobot在2016发布的一个大版本迭代，加入了注解。</p>
-<h2 id="集成方法"><a href="#集成方法" class="headerlink" title="集成方法"></a>集成方法</h2><h3 id="添加EventBus库"><a href="#添加EventBus库" class="headerlink" title="添加EventBus库"></a>添加EventBus库</h3><ol>
-<li>Gradle</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">compile &apos;org.greenrobot:eventbus:3.1.1&apos;</span><br></pre></td></tr></table></figure>
-
-<p>截止到笔者写作的时候，EventBus最新的版本号是3.1.1，所以此处用该版本号举例。具体的最新版本号，可以去EventBus的Github上查看。</p>
-<ol>
-<li>Maven</li>
-</ol>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.greenrobot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>eventbus<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.1.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h3><ol>
-<li><p>定义Event</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">MessageEvent</span> </span>&#123; <span class="comment">/* Additional fields if needed */</span> &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>注册EventBus并订阅Event</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onStart</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="keyword">super</span>.onStart();</span><br><span class="line">     EventBus.getDefault().register(<span class="keyword">this</span>);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="meta">@Override</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onStop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="keyword">super</span>.onStop();</span><br><span class="line">     EventBus.getDefault().unregister(<span class="keyword">this</span>);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Subscribe</span>(threadMode = ThreadMode.MAIN)  </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onMessageEvent</span><span class="params">(MessageEvent event)</span> </span>&#123;<span class="comment">/* Do something */</span>&#125;;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>发布Event</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">EventBus.getDefault().post(<span class="keyword">new</span> MessageEvent());</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h2 id="技术细节"><a href="#技术细节" class="headerlink" title="技术细节"></a>技术细节</h2><h3 id="Delivery-Threads"><a href="#Delivery-Threads" class="headerlink" title="Delivery Threads"></a>Delivery Threads</h3><p>Delivery Thread的定义是在EventBus2.0中的ThreadMode基础上完成的。EventBus具有跨线程功能，即Event的发布和订阅可以不在同一个线程。大家都知道，在Android中，UI操作必须在主线程中完成，而网络请求等耗时操作必须在子线程中完成，所以，Android跨线程的场景非常多。</p>
-<h4 id="POSTING"><a href="#POSTING" class="headerlink" title="POSTING"></a>POSTING</h4><ol>
-<li>默认设置，订阅者和发布者会在同一个线程调用。</li>
-<li>避免了线程切换，开销最小</li>
-<li>可能在主线程被调用，所以必须快速返回，防止阻塞主线程</li>
-<li>适合于没有UI操作的不耗时操作</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Subscribe</span>(threadMode = ThreadMode.POSTING)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onMessage</span><span class="params">(MessageEvent event)</span> </span>&#123;</span><br><span class="line">    log(event.message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="MAIN"><a href="#MAIN" class="headerlink" title="MAIN"></a>MAIN</h4><ol>
-<li>订阅方法会在主线程被调用</li>
-<li>必须快速返回，防止阻塞主线程</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Subscribe</span>(threadMode = ThreadMode.MAIN)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onMessage</span><span class="params">(MessageEvent event)</span> </span>&#123;</span><br><span class="line">    textField.setText(event.message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="MAIN-ORDERED"><a href="#MAIN-ORDERED" class="headerlink" title="MAIN_ORDERED"></a>MAIN_ORDERED</h4><ol>
-<li>订阅方法会在主线程被调用</li>
-<li>订阅方法会按照发布顺序有序调用</li>
-<li>必须快速返回，防止阻塞主线程</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Subscribe</span>(threadMode = ThreadMode.MAIN_ORDERED)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onMessage</span><span class="params">(MessageEvent event)</span> </span>&#123;</span><br><span class="line">    textField.setText(event.message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="BACKGROUND"><a href="#BACKGROUND" class="headerlink" title="BACKGROUND"></a>BACKGROUND</h4><ol>
-<li>订阅者会在后台线程中调用</li>
-<li>如果发布线程是后台线程，则直接在发布线程中调用，类似于POSTING</li>
-<li>如果发布线程是主线程，则会在一个后台线程中顺序调用</li>
-<li>必须快速返回，防止阻塞后台线程</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Subscribe</span>(threadMode = ThreadMode.BACKGROUND)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onMessage</span><span class="params">(MessageEvent event)</span></span>&#123;</span><br><span class="line">    saveToDisk(event.message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="ASYNC"><a href="#ASYNC" class="headerlink" title="ASYNC"></a>ASYNC</h4><ol>
-<li>独立于主线程和发布线程</li>
-<li>底层使用线程池管理</li>
-<li>可以有耗时操作</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Subscribe</span>(threadMode = ThreadMode.ASYNC)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onMessage</span><span class="params">(MessageEvent event)</span></span>&#123;</span><br><span class="line">    backend.send(event.message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h3><h4 id="单独配置EventBus"><a href="#单独配置EventBus" class="headerlink" title="单独配置EventBus"></a>单独配置EventBus</h4><p>我们可以使用EventBusBuilder^[3]^来配置自定义的EventBus。例如，配置EventBus当发布的时间没有订阅时只打印Log而不是真的发布。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">EventBus eventBus = EventBus.builder()</span><br><span class="line">    .logNoSubscriberMessages(false)</span><br><span class="line">    .sendNoSubscriberEvent(false)</span><br><span class="line">    .build();</span><br></pre></td></tr></table></figure>
-
-<h4 id="默认配置EventBus"><a href="#默认配置EventBus" class="headerlink" title="默认配置EventBus"></a>默认配置EventBus</h4><p>我们可以使用<code>EventBus.getDefault()</code>在任何地方获取EventBus的实例。也可以使用<code>installDefaultEventBus()</code>来配置这个默认实例。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">EventBus.builder().throwSubscriberException(BuildConfig.DEBUG).installDefaultEventBus();</span><br></pre></td></tr></table></figure>
-
-<p>使用要求：</p>
-<ol>
-<li>在第一次使用getDefault之前调用</li>
-<li>只能调用一次，之后的调用会引发异常</li>
-<li>最好在Application类中调用</li>
-</ol>
-<h3 id="Sticky-Event"><a href="#Sticky-Event" class="headerlink" title="Sticky Event"></a>Sticky Event</h3><p>我们可能需要缓存一些Event，即使在Event发布之后也能够触发订阅者的订阅事件，例如传感器和位置信息等。和Broadcast中的Sticky Broadcast类似。</p>
-<h4 id="发布Sticky-Event"><a href="#发布Sticky-Event" class="headerlink" title="发布Sticky Event"></a>发布Sticky Event</h4><ol>
-<li><p>发布</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">EventBus.getDefault().postSticky(new MessageEvent(&quot;Hello everyone!&quot;));</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>注册</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@Subscribe(sticky = true, threadMode = ThreadMode.MAIN)</span><br><span class="line">public void onEvent(MessageEvent event) &#123;   </span><br><span class="line">    textField.setText(event.message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h4 id="移除Sticky-Event"><a href="#移除Sticky-Event" class="headerlink" title="移除Sticky Event"></a>移除Sticky Event</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">MessageEvent stickyEvent = EventBus.getDefault().getStickyEvent(MessageEvent.class);</span><br><span class="line">// Better check that an event was actually posted before</span><br><span class="line">if(stickyEvent != null) &#123;</span><br><span class="line">    // &quot;Consume&quot; the sticky event</span><br><span class="line">    EventBus.getDefault().removeStickyEvent(stickyEvent);</span><br><span class="line">    // Now do something with it</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">MessageEvent stickyEvent = EventBus.getDefault().removeStickyEvent(MessageEvent.class);</span><br></pre></td></tr></table></figure>
-
-<h3 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h3><p>订阅者之间通过优先级来确定收到订阅消息的先后顺序。默认优先级都是0，优先级大的订阅者会比其他订阅者更早收到消息，并且可以通过<code>cancelEventDelivery()</code>来取消订阅消息的下一步传递。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@Subscribe(priority = 1, threadMode = ThreadMode.POSTING)</span><br><span class="line">public void onEvent(MessageEvent event) &#123;</span><br><span class="line">    // 只能在发布线程中调用</span><br><span class="line">    EventBus.getDefault().cancelEventDelivery(event) ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="原理解析"><a href="#原理解析" class="headerlink" title="原理解析"></a>原理解析</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>[1] <a href="https://github.com/greenrobot/EventBus" target="_blank" rel="noopener">https://github.com/greenrobot/EventBus</a></p>
-<p>[2] <a href="http://greenrobot.org/eventbus" target="_blank" rel="noopener">http://greenrobot.org/eventbus</a></p>
-<p>[3] <a href="http://greenrobot.org/files/eventbus/javadoc/3.0/org/greenrobot/eventbus/EventBusBuilder.html" target="_blank" rel="noopener">http://greenrobot.org/files/eventbus/javadoc/3.0/org/greenrobot/eventbus/EventBusBuilder.html</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -461,9 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/24/使用Hexo搭建博客/" itemprop="url">使用Hexo搭建博客</a></h1>
+          <h1 class="post-title" itemprop="name headline">使用Hexo搭建博客</h1>
         
 
         <div class="post-meta">
@@ -513,9 +300,7 @@
       
 
       
-        
-          
-            <h2 id="博客框架的选择"><a href="#博客框架的选择" class="headerlink" title="博客框架的选择"></a>博客框架的选择</h2><ul>
+        <h2 id="博客框架的选择"><a href="#博客框架的选择" class="headerlink" title="博客框架的选择"></a>博客框架的选择</h2><ul>
 <li><a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a></li>
 <li><a href="http://www.gohugo.org/" target="_blank" rel="noopener">hugo</a></li>
 <li><a href="https://www.djangoproject.com/" target="_blank" rel="noopener">django</a></li>
@@ -624,8 +409,6 @@
 <li><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo中文文档</a></li>
 </ul>
 
-          
-        
       
     </div>
     
@@ -640,14 +423,38 @@
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+            <a href="/tags/Github/" rel="tag"># Github</a>
+          
+        </div>
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/24/EventBus3-0使用指南/" rel="prev" title="EventBus3.0使用指南">
+                EventBus3.0使用指南 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </div>
@@ -657,10 +464,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -668,6 +476,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -688,8 +500,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -740,6 +561,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#博客框架的选择"><span class="nav-number">1.</span> <span class="nav-text">博客框架的选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Hexo简介"><span class="nav-number">2.</span> <span class="nav-text">1. Hexo简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo特点"><span class="nav-number">2.1.</span> <span class="nav-text">Hexo特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo原理"><span class="nav-number">2.2.</span> <span class="nav-text">Hexo原理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Hexo搭建博客"><span class="nav-number">3.</span> <span class="nav-text">2. Hexo搭建博客</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-安装node-js"><span class="nav-number">3.0.1.</span> <span class="nav-text">2.1 安装node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-安装hexo"><span class="nav-number">3.0.2.</span> <span class="nav-text">2.2 安装hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-创建博客目录"><span class="nav-number">3.0.3.</span> <span class="nav-text">2.3 创建博客目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-生成静态页面"><span class="nav-number">3.0.4.</span> <span class="nav-text">2.4 生成静态页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-运行hexo服务"><span class="nav-number">3.0.5.</span> <span class="nav-text">2.5 运行hexo服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-6-新建一篇文章"><span class="nav-number">3.0.6.</span> <span class="nav-text">2.6 新建一篇文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-7-配置"><span class="nav-number">3.0.7.</span> <span class="nav-text">2.7 配置</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#3-部署到Github"><span class="nav-number">4.</span> <span class="nav-text">3. 部署到Github</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-创建一个Github账号"><span class="nav-number">4.0.1.</span> <span class="nav-text">3.1 创建一个Github账号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-创建一个repo"><span class="nav-number">4.0.2.</span> <span class="nav-text">3.2 创建一个repo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-安装hexo-deployer-git"><span class="nav-number">4.0.3.</span> <span class="nav-text">3.3 安装hexo-deployer-git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-网站配置git"><span class="nav-number">4.0.4.</span> <span class="nav-text">4.4 网站配置git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-部署"><span class="nav-number">4.0.5.</span> <span class="nav-text">4.5 部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Hexo更多配置"><span class="nav-number">5.</span> <span class="nav-text">4. Hexo更多配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-配置主题"><span class="nav-number">5.1.</span> <span class="nav-text">4.1 配置主题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-1-下载主题资源"><span class="nav-number">5.1.1.</span> <span class="nav-text">4.1.1 下载主题资源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-2-应用下载的主题"><span class="nav-number">5.1.2.</span> <span class="nav-text">4.1.2 应用下载的主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-3-主题其他配置"><span class="nav-number">5.1.3.</span> <span class="nav-text">4.1.3 主题其他配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-配置标签"><span class="nav-number">5.2.</span> <span class="nav-text">4.2 配置标签</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-1-两个确认"><span class="nav-number">5.2.1.</span> <span class="nav-text">4.2.1 两个确认</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-2-新建tags页面"><span class="nav-number">5.2.2.</span> <span class="nav-text">4.2.2 新建tags页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-3-修改source-tags-index-md"><span class="nav-number">5.2.3.</span> <span class="nav-text">4.2.3 修改source/tags/index.md</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-4-在文章中添加tags"><span class="nav-number">5.2.4.</span> <span class="nav-text">4.2.4 在文章中添加tags</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-评论"><span class="nav-number">5.3.</span> <span class="nav-text">4.3 评论</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">6.</span> <span class="nav-text">参考资料</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -873,6 +710,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

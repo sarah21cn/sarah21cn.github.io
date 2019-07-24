@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Android,">
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yin Shan">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="背景EventBus是一个Android端优化的publish/subscribe消息总线，简化了应用程序内各组件间、组件与后台线程间的通信。比如请求网络，等网络返回时通过Handler或Broadcast通知UI，两个Fragment之间需要通过Listener通信，这些需求都可以通过EventBus实现。 大家谈到EventBus，总会想到greenrobot的EventBus，但是实际上Ev">
+<meta name="keywords" content="Android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EventBus3.0使用指南">
+<meta property="og:url" content="http://yoursite.com/2019/07/24/EventBus3-0使用指南/index.html">
 <meta property="og:site_name" content="Yin Shan">
+<meta property="og:description" content="背景EventBus是一个Android端优化的publish/subscribe消息总线，简化了应用程序内各组件间、组件与后台线程间的通信。比如请求网络，等网络返回时通过Handler或Broadcast通知UI，两个Fragment之间需要通过Listener通信，这些需求都可以通过EventBus实现。 大家谈到EventBus，总会想到greenrobot的EventBus，但是实际上Ev">
 <meta property="og:locale" content="中文">
+<meta property="og:updated_time" content="2019-07-24T06:05:35.298Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yin Shan">
+<meta name="twitter:title" content="EventBus3.0使用指南">
+<meta name="twitter:description" content="背景EventBus是一个Android端优化的publish/subscribe消息总线，简化了应用程序内各组件间、组件与后台线程间的通信。比如请求网络，等网络返回时通过Handler或Broadcast通知UI，两个Fragment之间需要通过Listener通信，这些需求都可以通过EventBus实现。 大家谈到EventBus，总会想到greenrobot的EventBus，但是实际上Ev">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/24/EventBus3-0使用指南/">
 
 
 
 
 
-  <title>Yin Shan</title>
+  <title>EventBus3.0使用指南 | Yin Shan</title>
   
 
 
@@ -140,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,9 +218,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -246,9 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/24/EventBus3-0使用指南/" itemprop="url">EventBus3.0使用指南</a></h1>
+          <h1 class="post-title" itemprop="name headline">EventBus3.0使用指南</h1>
         
 
         <div class="post-meta">
@@ -298,9 +300,7 @@
       
 
       
-        
-          
-            <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>EventBus是一个Android端优化的publish/subscribe消息总线，简化了应用程序内各组件间、组件与后台线程间的通信。比如请求网络，等网络返回时通过Handler或Broadcast通知UI，两个Fragment之间需要通过Listener通信，这些需求都可以通过EventBus实现。</p>
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>EventBus是一个Android端优化的publish/subscribe消息总线，简化了应用程序内各组件间、组件与后台线程间的通信。比如请求网络，等网络返回时通过Handler或Broadcast通知UI，两个Fragment之间需要通过Listener通信，这些需求都可以通过EventBus实现。</p>
 <p>大家谈到EventBus，总会想到greenrobot的EventBus，但是实际上EventBus是一个通用的叫法。例如Google出品的Guava，Guava是一个庞大的库，EventBus只是它附带的一个小功能，因此实际项目中使用并不多。用的最多的是greenrobot/EventBus，这个库的优点是接口简洁，集成方便。另一个库square/otto修改自 Guava ，用的人也不少。</p>
 <p>目前本文只讨论greenrobot的EventBus库。</p>
 <p>EventBus 3.0是greenrobot在2016发布的一个大版本迭代，加入了注解。</p>
@@ -397,8 +397,6 @@
 <p>[2] <a href="http://greenrobot.org/eventbus" target="_blank" rel="noopener">http://greenrobot.org/eventbus</a></p>
 <p>[3] <a href="http://greenrobot.org/files/eventbus/javadoc/3.0/org/greenrobot/eventbus/EventBusBuilder.html" target="_blank" rel="noopener">http://greenrobot.org/files/eventbus/javadoc/3.0/org/greenrobot/eventbus/EventBusBuilder.html</a></p>
 
-          
-        
       
     </div>
     
@@ -413,241 +411,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/24/使用Hexo搭建博客/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yin Shan">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yin Shan">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/24/使用Hexo搭建博客/" itemprop="url">使用Hexo搭建博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-24T13:39:27+08:00">
-                2019-07-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/Android/" rel="tag"># Android</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="博客框架的选择"><a href="#博客框架的选择" class="headerlink" title="博客框架的选择"></a>博客框架的选择</h2><ul>
-<li><a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a></li>
-<li><a href="http://www.gohugo.org/" target="_blank" rel="noopener">hugo</a></li>
-<li><a href="https://www.djangoproject.com/" target="_blank" rel="noopener">django</a></li>
-<li><a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a></li>
-</ul>
-<h2 id="1-Hexo简介"><a href="#1-Hexo简介" class="headerlink" title="1. Hexo简介"></a>1. Hexo简介</h2><h3 id="Hexo特点"><a href="#Hexo特点" class="headerlink" title="Hexo特点"></a>Hexo特点</h3><ol>
-<li>支持Markdown: 支持Markdown意味着你可以把经历从排版中解放出来.</li>
-<li>轻量: 无需拥有后台及数据库,专心写好你的文章</li>
-<li>一键部署: 可以通过Git或者ftp来将生成的静态页面部署到服务器或者主机空间中</li>
-<li>插件丰富: 丰富的插件可以满足你的各种需求.</li>
-</ol>
-<h3 id="Hexo原理"><a href="#Hexo原理" class="headerlink" title="Hexo原理"></a>Hexo原理</h3><p>Hexo基于Node.js,将/source文件夹下的资源(文章,图片,模板),按照预定的配置文件,转换成静态页面放置到/public目录下.如果需要预览或者部署,hexo会把public作为web目录处理。</p>
-<p>Node.js是一个基于Chrome V8引擎的JavaScript运行环境,为我们的Hexo提供js脚本的运行环境.</p>
-<p>npm则是一个JavaScript的包管理工具.主流的很多语言都会有自己的包管理器。</p>
-<h2 id="2-Hexo搭建博客"><a href="#2-Hexo搭建博客" class="headerlink" title="2. Hexo搭建博客"></a>2. Hexo搭建博客</h2><h4 id="2-1-安装node-js"><a href="#2-1-安装node-js" class="headerlink" title="2.1 安装node.js"></a>2.1 安装node.js</h4><p>去<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">nodejs官网</a>下载对应系统的安装包，按提示安装。</p>
-<p>检验安装成功：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> node -v</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-2-安装hexo"><a href="#2-2-安装hexo" class="headerlink" title="2.2 安装hexo"></a>2.2 安装hexo</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-3-创建博客目录"><a href="#2-3-创建博客目录" class="headerlink" title="2.3 创建博客目录"></a>2.3 创建博客目录</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> hexo init sarah21cn.github.io</span><br><span class="line"><span class="meta">$</span> cd sarah21cn.github.io</span><br><span class="line"><span class="meta">$</span> npm install</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p> sarah21cn.github.io 为目录名称，可以自定义</p>
-</blockquote>
-<h4 id="2-4-生成静态页面"><a href="#2-4-生成静态页面" class="headerlink" title="2.4 生成静态页面"></a>2.4 生成静态页面</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> hexo clean</span><br><span class="line"><span class="meta">$</span> hexo g</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>g 为 generate</p>
-</blockquote>
-<h4 id="2-5-运行hexo服务"><a href="#2-5-运行hexo服务" class="headerlink" title="2.5 运行hexo服务"></a>2.5 运行hexo服务</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> hexo s</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>s 为 server</p>
-</blockquote>
-<h4 id="2-6-新建一篇文章"><a href="#2-6-新建一篇文章" class="headerlink" title="2.6 新建一篇文章"></a>2.6 新建一篇文章</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> hexo new test</span><br></pre></td></tr></table></figure>
-
-<p>此时会在<code>source/_posts</code>目录下生成<code>test.md</code>文件，输入些许内容，然后保存.</p>
-<p>生成下，看看效果</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> hexo clean</span><br><span class="line"><span class="meta">$</span> hexo g</span><br><span class="line"><span class="meta">$</span> hexo s</span><br></pre></td></tr></table></figure>
-
-<p>访问 <strong>localhost:4000</strong> 即可看到新生成的文章</p>
-<h4 id="2-7-配置"><a href="#2-7-配置" class="headerlink" title="2.7 配置"></a>2.7 配置</h4><p>网站的设置大部分都在<strong>_config.yml</strong>文件中，详细配置可以查看<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">官方文档</a></p>
-<p>下面只列出简单常用配置</p>
-<ul>
-<li><strong>title</strong> -&gt; 网站标题</li>
-<li><strong>subtitle</strong> -&gt; 网站副标题</li>
-<li><strong>description</strong> -&gt; 网站描述</li>
-<li><strong>author</strong> -&gt; 您的名字</li>
-<li><strong>language</strong> -&gt; 网站使用的语言</li>
-</ul>
-<p>坑：<strong>进行配置时，需要在冒号:后加一个英文空格</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title: Droidlover</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-部署到Github"><a href="#3-部署到Github" class="headerlink" title="3. 部署到Github"></a>3. 部署到Github</h2><h4 id="3-1-创建一个Github账号"><a href="#3-1-创建一个Github账号" class="headerlink" title="3.1 创建一个Github账号"></a>3.1 创建一个Github账号</h4><p>如<code>sarah21cn</code></p>
-<h4 id="3-2-创建一个repo"><a href="#3-2-创建一个repo" class="headerlink" title="3.2 创建一个repo"></a>3.2 创建一个repo</h4><p>创建一个 <code>sarah21cn.github.io</code>的<code>repo</code>。将<code>sarah21cn</code>改为自己的github账号，命名需要与github账号保持同步.</p>
-<h4 id="3-3-安装hexo-deployer-git"><a href="#3-3-安装hexo-deployer-git" class="headerlink" title="3.3 安装hexo-deployer-git"></a>3.3 安装hexo-deployer-git</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-4-网站配置git"><a href="#4-4-网站配置git" class="headerlink" title="4.4 网站配置git"></a>4.4 网站配置git</h4><p>在网站的<code>_config.yml</code>中配置deploy</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: &lt;repository url&gt;</span><br><span class="line">  branch: [branch]</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><code>branch</code>为分支，默认为<code>master</code>,可以不配置 <code>repo</code>为仓库地址，在github上新建仓库后，可复制此地址</p>
-</blockquote>
-<h4 id="4-5-部署"><a href="#4-5-部署" class="headerlink" title="4.5 部署"></a>4.5 部署</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> hexo d</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>d 即deploy。以后每次更新文章或内容都需要运行重新部署，修改会自动push到github上</p>
-</blockquote>
-<h2 id="4-Hexo更多配置"><a href="#4-Hexo更多配置" class="headerlink" title="4. Hexo更多配置"></a>4. Hexo更多配置</h2><h3 id="4-1-配置主题"><a href="#4-1-配置主题" class="headerlink" title="4.1 配置主题"></a>4.1 配置主题</h3><p>Hexo 中有很多主题，可以在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">官网</a>查看。 这里我推荐<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">hexo-theme-next</a>，下面列举更换主题的一般套路：</p>
-<h4 id="4-1-1-下载主题资源"><a href="#4-1-1-下载主题资源" class="headerlink" title="4.1.1 下载主题资源"></a>4.1.1 下载主题资源</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-1-2-应用下载的主题"><a href="#4-1-2-应用下载的主题" class="headerlink" title="4.1.2 应用下载的主题"></a>4.1.2 应用下载的主题</h4><p>在网站配置文件<strong>_config.yml</strong>中，配置<strong>theme</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>next是主题名称，具体的可查看主题的文档</p>
-</blockquote>
-<h4 id="4-1-3-主题其他配置"><a href="#4-1-3-主题其他配置" class="headerlink" title="4.1.3 主题其他配置"></a>4.1.3 主题其他配置</h4><p>可在<code>/theme/{theme}/_config.yml</code> 主题的配置文件下进行主题的配置。</p>
-<p>接下来，可以执行万能的调试命令看看效果</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> hexo clean</span><br><span class="line"><span class="meta">$</span> hexo g</span><br><span class="line"><span class="meta">$</span> hexo s</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-2-配置标签"><a href="#4-2-配置标签" class="headerlink" title="4.2 配置标签"></a>4.2 配置标签</h3><h4 id="4-2-1-两个确认"><a href="#4-2-1-两个确认" class="headerlink" title="4.2.1 两个确认"></a>4.2.1 两个确认</h4><ul>
-<li>确认站点配置文件有</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tag_dir: tags</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>确认主题配置文件有</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tags: tags</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-2-2-新建tags页面"><a href="#4-2-2-新建tags页面" class="headerlink" title="4.2.2 新建tags页面"></a>4.2.2 新建tags页面</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> hexo new page tags</span><br></pre></td></tr></table></figure>
-
-<p>此时会在<code>source/</code>下生成<code>tags/index.md</code>文件</p>
-<h4 id="4-2-3-修改source-tags-index-md"><a href="#4-2-3-修改source-tags-index-md" class="headerlink" title="4.2.3 修改source/tags/index.md"></a>4.2.3 修改source/tags/index.md</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2015-10-20 06:49:50</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">comments: false</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>date 可保持系统生成的时间，</p>
-</blockquote>
-<h4 id="4-2-4-在文章中添加tags"><a href="#4-2-4-在文章中添加tags" class="headerlink" title="4.2.4 在文章中添加tags"></a>4.2.4 在文章中添加tags</h4><p>在文章<code>xx.md</code>中添加：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tags: </span><br><span class="line">	- Tag1</span><br><span class="line">	- Tag2</span><br><span class="line">	- Tag3</span><br></pre></td></tr></table></figure>
-
-<p>多个Tag可按上面的格式添加。</p>
-<h3 id="4-3-评论"><a href="#4-3-评论" class="headerlink" title="4.3 评论"></a>4.3 评论</h3><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo中文文档</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/24/使用Hexo搭建博客/" rel="next" title="使用Hexo搭建博客">
+                <i class="fa fa-chevron-left"></i> 使用Hexo搭建博客
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -657,10 +450,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -668,6 +462,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -688,8 +486,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -740,6 +547,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集成方法"><span class="nav-number">2.</span> <span class="nav-text">集成方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加EventBus库"><span class="nav-number">2.1.</span> <span class="nav-text">添加EventBus库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简单使用"><span class="nav-number">2.2.</span> <span class="nav-text">简单使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#技术细节"><span class="nav-number">3.</span> <span class="nav-text">技术细节</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Delivery-Threads"><span class="nav-number">3.1.</span> <span class="nav-text">Delivery Threads</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#POSTING"><span class="nav-number">3.1.1.</span> <span class="nav-text">POSTING</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MAIN"><span class="nav-number">3.1.2.</span> <span class="nav-text">MAIN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MAIN-ORDERED"><span class="nav-number">3.1.3.</span> <span class="nav-text">MAIN_ORDERED</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BACKGROUND"><span class="nav-number">3.1.4.</span> <span class="nav-text">BACKGROUND</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ASYNC"><span class="nav-number">3.1.5.</span> <span class="nav-text">ASYNC</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Configuration"><span class="nav-number">3.2.</span> <span class="nav-text">Configuration</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#单独配置EventBus"><span class="nav-number">3.2.1.</span> <span class="nav-text">单独配置EventBus</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#默认配置EventBus"><span class="nav-number">3.2.2.</span> <span class="nav-text">默认配置EventBus</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sticky-Event"><span class="nav-number">3.3.</span> <span class="nav-text">Sticky Event</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#发布Sticky-Event"><span class="nav-number">3.3.1.</span> <span class="nav-text">发布Sticky Event</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#移除Sticky-Event"><span class="nav-number">3.3.2.</span> <span class="nav-text">移除Sticky Event</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优先级"><span class="nav-number">3.4.</span> <span class="nav-text">优先级</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原理解析"><span class="nav-number">4.</span> <span class="nav-text">原理解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">5.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -873,6 +696,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
